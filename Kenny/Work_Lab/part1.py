@@ -7,6 +7,9 @@ class Solution:
             for num in nums:
                 ans.append(num)  # Append each number twice
         return ans  # Return the concatenated list
+    
+
+
 class Solution2:
       
       def hasduplicateNums(slef, nums: List[int])-> bool:
@@ -19,7 +22,18 @@ class Solution2:
             if nums[i] == nums[i + 1]:
                 return True
           return False
-              
+      
+
+
+class Solution3:
+        
+        def isAnagram(self, s: str, t: str) -> bool:   
+            if sorted(s) == sorted(t):  # uses pythons sorted library function to return an array of each letter in the string and then comapres them. 
+                return True
+            return False
+            
+            
+        
           
 
 
@@ -29,6 +43,11 @@ class Solution2:
 # Create an instance of Solution
 sol = Solution()
 sol2 = Solution2()
+sol3 = Solution3()
+
+
+
+# Solution 1
 
 
 # Input list
@@ -38,13 +57,18 @@ a = [1]
 print(f"solution 1: {sol.getConcatenation(a)}")  # Expected Output: [1, 1]
 
 
-
+# Solution 2
 
 b = [2,2,1]
 c = [1,2,3,4]
 print(f"solution 2: {sol2.hasduplicateNums(b)}")
 print(sol2.hasduplicateNums(c))
 
+# Solution 3
+# this is a leet code for an anagram 
 
+s = "racecar"
+t = "carrace"
 
+print(f"solution 3: {sol3.isAnagram(s,t)}")
 
